@@ -1,9 +1,9 @@
 <?php
-include '../model/crud.php';
+// include '../model/crud.php';
 
-$obj = new crud;
+$obj = new tours;
 $tours = $obj->afficher();
-$delete = $obj->delete();
+// $obj->delete();
 
 
 
@@ -126,12 +126,38 @@ $delete = $obj->delete();
         font-size: 16px;
         padding-top: 6px
     }
+
+    .btnn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btnn button {
+        background-color: azure;
+
+    }
+
+
+    .btnnn {
+        margin-top: 2%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .btnnn button {
+        background-color: azure;
+    }
     </style>
 
 </head>
 
 <body>
-
+    <div class="btnnn">
+        <a href="first.php?action=tours"><button class="add">Logout</button></a>
+    </div>
     <div class="container-xl">
         <div class="table-responsive">
             <div class="table-wrapper">
@@ -164,10 +190,10 @@ $delete = $obj->delete();
                             </td>
                             <td>
 
-                                <a href="edittour.php?edit=<?php echo $tour['id']; ?>" class="edit" title="Edit"
-                                    data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a href="tours.php?delete=<?php echo $tour['id']; ?>" class="delete" title="Delete"
-                                    data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a href="first.php?action=edittour&edit=<?php echo $tour['id']; ?>" class="edit"
+                                    title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a href="first.php?action=delete&id=<?php echo $tour['id']; ?>" class="delete"
+                                    title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                             </td>
                             <?php
                         }
@@ -180,7 +206,10 @@ $delete = $obj->delete();
             </div>
         </div>
     </div>
-    <a href="addtour.php"><button class="add">Add</button></a>
+    <div class="btnn">
+        <a href="first.php?action=addtours"><button class="add">Add</button></a>
+    </div>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travigo - Travel for everyone</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="view/css/style.css">
     <meta name="description"
         content="Choose From a Wide Range of Properties Which Booking.com Offers. Search Now! Find What You Need At Travigo.Com, The Biggest Travel Site In The World.">
 
@@ -22,15 +22,15 @@
 <body>
     <!--header--->
     <header>
-        <a href="#" class="logo">TVT</a>
+        <a href="first.php" class="logo">TVT</a>
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <ul class="navbar">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="tours.php">Tours</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="dash.php">Dashboard</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="first.php">Home</a></li>
+            <li><a href="first.php?action=tours">Tours</a></li>
+            <li><a href="first.php?action=about">About</a></li>
+            <li><a href="first.php?action=contactus">Contact Us</a></li>
+            <li><a href="first.php?action=login">Login</a></li>
         </ul>
     </header>
 
@@ -267,7 +267,7 @@
     </section>
 
     <!--link to js--->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="view/js/script.js"></script>
 
 </body>
 

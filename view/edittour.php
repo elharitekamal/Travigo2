@@ -1,10 +1,24 @@
 <?php
-include '../model/crud.php';
+include 'model/tours.php';
 
-$obj = new crud;
 
+$obj = new tours();
+$element = "";
+if (isset($_GET['edit'])) {
+    $element = $_GET['edit'];
+}
 if (isset($_POST['submit'])) {
-    $obj->update($_POST);
+
+    $ville = $_POST["ville"];
+    $pays = $_POST["pays"];
+    $fileName = $_FILES["image"]["name"];
+    $fileSize = $_FILES["image"]["size"];
+    $tmpName = $_FILES["image"]["tmp_name"];
+
+    $obj->edit($ville, $pays, $fileName, $tmpName, $element);
+    header("location: first.php?action=dash");
+
+
 }
 
 ?>
